@@ -7,10 +7,90 @@
 </ion-header>
 <ion-header>
   <ion-toolbar>
-    <ion-title>drink</ion-title>
+    <ion-title>Cocktails And Spirits</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-content>
+    <h1>Guide For Cocktails and Drinks</h1>
+    <ion-img src="assets/cocktail.jpg"height="200" width="200"></ion-img>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Cocktails</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+      <p>The most on content and popular coktail we give you the Long Island Ice Tea.</p> 
+        <br>
+       <h2>Long Island Ice Tea</h2>
+    
+      <h3>Ingredients</h3> 
+      <ul> 
+        <li>50ml vanilla vodka (we used Absolut Vanilia)</li>
+        
+        <li>50ml London dry gin</li>
+        <li>50ml reposado tequila (we used El Jimador)</li>
+        <li>50ml rum (we used Bacardi)</li>
+        <li>50ml triple sec (we used Cointreau)</li>
+        <li>50-100ml fresh lime juice</li>
+        <li>ice</li>
+        <li>500ml cola</li>
+        <li>2 limes, cut into wedges</li>
+      </ul> 
+      <h3>Method</h3> 
+      <ol>
+        <li>Pour the vodka, gin, tequila, rum and triple sec into a large (1.5l) jug, and add lime juice to taste. Half fill the jug with ice, then stir until the outside feels cold.</li>
+        <li>Add the cola then stir to combine. Drop in the lime wedges.  </li>
+        <li>Fill 4 tall glasses with more ice cubes and pour in the iced tea.</li>
 
-</ion-content>
+      </ol>
+    </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Strong Spirits</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+      <p>For a strong white potatoe based white spirit we give you Ireland's finies Poitin.</p> 
+        <br>
+       <h2>Poitin</h2>
+    
+      <h3>Ingredients</h3> 
+      <ul>   
+        <li>2 lb potatoes, scrubbed well</li>
+        <li>2 lb raisins, washed in hot water and chopped</li>
+        <li>4 lb brown sugar</li>
+        <li>1 pint fresh wheat, husks removed</li>
+        <li>6 pints water</li>
+        <li>Wine yeast</li>
+        <li>Campden tablet</li>
+      </ul> 
+      <h3>Method</h3> 
+      <ol>
+        <li>Sprinkle the yeast granules into a cup of boiled tepid water, cover with Clingfilm and leave to stand for about half an hour.</li>
+        <li> Grate the potatoes into a fermentation bin then stir in the raisins, sugar and wheat.</li>
+        <li>Bring the water to the boil, pour over the ingredients and stir well until all the sugar has dissolved.</li>
+        <li>Cover and leave to cool. When cool, add the activated yeast, cover loosely and keep in a cool place for 3 weeks, stirring at regular intervals</li>
+        <li>Strain the liquid into a demi-john topping up to 1 gallon with cold boiled water, if required. </li>
+        <li>Fit an airlock and leave to ferment. When fermentation has ceased, siphon the wine into a clean demi-john and add 1 crushed Campden tablet.</li>
+        <li> Bung tight and store for at least 6 months.</li>
+        <li> Finally, siphon into sterilized bottles, seal tightly and then, don’t forget to check the potency of the brew before drinking!</li>
+      </ol>
+    </ion-card-content>
+    </ion-card>
+    <ul>
+      <ion-card>
+      <ion-card-header>
+        <ion-card-title>Leave Us A Recipie</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>We Would like to hear from you, so please share with us your master cocktail or moonshine delight.</p>
+      </ion-card-content>
+      <ion-item>
+        <ion-textarea [(ngModel)]="drinks" placeholder="Place Your Recipie Here..."></ion-textarea> 
+      </ion-item>
+    <ion-button (click)="save1()">Submit Cocktail Recipie</ion-button>
+    </ion-card>
+

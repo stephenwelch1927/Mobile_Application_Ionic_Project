@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{Router} from '@angular/router';
+import {RecipiesService} from '../Services/recipies.service';
+import{Storage} from '@ionic/storage';
 
 @Component({
   selector: 'app-food',
@@ -7,10 +9,23 @@ import{Router} from '@angular/router';
   styleUrls: ['./food.page.scss'],
 })
 export class FoodPage implements OnInit {
+  recipies:any=[];
+  myRecipie:string;
+  constructor(private recipieService:RecipiesService, private storage:Storage) { }
+  
 
-  constructor() { }
-
+  //NgOnInit that gets data from the web
   ngOnInit() {
+    this.recipieService.GetRecipie().subscribe(
+      (data)=>{
+        this.recipies = data.articles;
+      }
+    );  
+  }
+  //Button On Click save to Storage
+  save(){
+    console.log(this.myRecipie);
+    this.storage.set("recipie", this.myRecipie);
   }
 
 }

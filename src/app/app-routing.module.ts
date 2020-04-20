@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'drink',
     loadChildren: () => import('./drink/drink.module').then( m => m.DrinkPageModule)
   },
+  {
+    path: 'forum',
+    loadChildren: () => import('./forum/forum.module').then( m => m.ForumPageModule)
+  },
 ];
 
 @NgModule({

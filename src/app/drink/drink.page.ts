@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{Storage} from '@ionic/storage';
 
 @Component({
   selector: 'app-drink',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drink.page.scss'],
 })
 export class DrinkPage implements OnInit {
-
-  constructor() { }
+  cocktail:string;
+  constructor(private storage:Storage) { }
 
   ngOnInit() {
+  }
+  save1(){
+    console.log(this.cocktail);
+    this.storage.set("drinks", this.cocktail);
   }
 
 }

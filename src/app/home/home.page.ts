@@ -14,6 +14,9 @@ export class HomePage {
   btnClicked1(){
     this.router.navigate(['drink'])
   }
+  btnClicked2(){
+    this.router.navigate(['forum'])
+  }
 
 
     
