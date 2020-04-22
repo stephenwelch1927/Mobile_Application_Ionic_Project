@@ -16,11 +16,7 @@ export class FoodPage implements OnInit {
 
   //NgOnInit that gets data from the web
   ngOnInit() {
-    this.recipieService.GetRecipie().subscribe(
-      (data)=>{
-        this.recipies = data.articles;
-      }
-    );  
+  
   }
   //Button On Click save to Storage
   save(){

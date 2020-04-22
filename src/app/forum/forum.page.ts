@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{Storage} from '@ionic/storage';
 import{Camera, CameraOptions} from '@ionic-native/camera/ngx';
+import {RecipiesService} from '../Services/recipies.service';
 ;@Component({
   selector: 'app-forum',
   templateUrl: './forum.page.html',
@@ -9,7 +10,8 @@ import{Camera, CameraOptions} from '@ionic-native/camera/ngx';
 export class ForumPage implements OnInit {
 myRecipie:String;
 cocktail:String;
-  constructor(private storage: Storage, private camera:Camera) { }
+recipies:any=[];
+  constructor(private storage: Storage, private camera:Camera, private recipieService:RecipiesService) { }
   
   //Method That uses the Native PlugIn of the camera
   takePhoto(){
@@ -46,6 +48,12 @@ cocktail:String;
     ).catch(
       (error)=>{
         console.log(error);
+      }
+    );
+    //NgOnInit that gets data from the web
+    this.recipieService.GetRecipie().subscribe(
+      (data)=>{
+        this.recipies = data.drinks;
       }
     );
     

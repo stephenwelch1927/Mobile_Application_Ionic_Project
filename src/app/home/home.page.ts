@@ -7,8 +7,8 @@ import{Router} from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  //Button to navigate between different pages
   btnClicked(){
-    console.log("Btn is clicked")
     this.router.navigate(['food'])
   }
   btnClicked1(){

@@ -10,6 +10,6 @@ export class RecipiesService {
   constructor(private httpClient:HttpClient, private httpClientModule:HttpClientModule) { }
 
   GetRecipie():Observable<any>{
-    return this.httpClient.get('http://newsapi.org/v2/top-headlines?country=ie&apiKey=a75b86e82bb64067acfd2364c3f53149');
+    return this.httpClient.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
   }
 }

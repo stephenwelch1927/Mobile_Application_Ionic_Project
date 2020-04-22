@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <!--Ion back button that naviagtes back to the home page-->
     <ion-buttons slot="start">
       <ion-back-button default-href="home"></ion-back-button>
     </ion-buttons>
@@ -14,6 +15,8 @@
 <ion-content>
 <h1>Guide For Food And Recipies</h1>
 <ion-img src="assets/streetfood.jpg"height="200" width="200"></ion-img>
+
+<!--Ion Card's With Recipie Content-->
 <ion-card>
   <ion-card-header>
     <ion-card-title>European Cuisine</ion-card-title>
@@ -22,7 +25,8 @@
   <ion-card-content>
   <p>For the best and most recognised recipe, we have decided to give you Italy's finest Spaghetti Bolognese.</p> 
     <br>
-   <h2>Spaghetti Bolognese</h2>
+    <ion-icon name="restaurant-outline"></ion-icon>
+    <h2>Spaghetti Bolognese</h2>
 
   <h3>Ingredients</h3> 
   <ul> 
@@ -58,7 +62,8 @@
   <ion-card-content>
   <p>For the most flavourable dish full of many different tastes we give you Thailand's amazing Thai Green Curry</p> 
     <br>
-   <h2>Thai Green Curry</h2>
+    <ion-icon name="restaurant-outline"></ion-icon>
+    <h2>Thai Green Curry</h2>
 
   <h3>Ingredients</h3> 
   <ul> 
@@ -104,12 +109,7 @@
 <ion-button (click)="save()">Submit Recipie</ion-button>
 </ion-card>
 <br>
-<ul>  
-  <li *ngFor="let recipie of recipies">
-  <h3>{{recipie.title}}</h3>  
-   
-  </li>
-  </ul>
+
 
 
 

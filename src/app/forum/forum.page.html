@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <!--Ion back button that naviagtes back to the home page-->
     <ion-buttons slot="start">
       <ion-back-button default-href="home"></ion-back-button>
     </ion-buttons>
@@ -7,13 +8,42 @@
 </ion-header>
 <ion-header>
   <ion-toolbar>
-    <ion-title>forum</ion-title>
+    <ion-title>Forum</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<h3>{{myRecipie}}</h3>
-<h3>{{cocktail}}</h3>
-
+    <h2>Recipies Posted By You</h2>
+    <!--Storage Out Put with input from food page-->
+    <p>{{myRecipie}}</p>
+    <br>
+    <h2>Cocktails Posted By You</h2>
+    <!--Storage Out Put with input from drink page-->
+    <p>{{cocktail}}</p>
+    <br>
+    <!--Button Click to use the native plugin for the camera-->
 <ion-button (click)="takePhoto()">Take A Picture Of A Recipie</ion-button>
+
+<br>
+<h2>Cocktails Provided From The Web</h2>
+<!--JSON Array for all the elements requested from web -->
+<ul>  
+  <li *ngFor="let recipie of recipies">
+  <h3>Cocktail ID: {{recipie.idDrink}}</h3>  
+   <h4>Alcohol/Non Alcohol: {{recipie.strAlcoholic}}</h4>
+   <h4>Glass Type: {{recipie.strGlass}}</h4>
+   <h4>Instructions: {{recipie.strInstructions}}</h4>
+   <h4>Ingredient1: {{recipie.strIngredient1}}</h4>
+   <h4>Ingredient2: {{recipie.strIngredient2}}</h4>
+   <h4>Ingredient3: {{recipie.strIngredient3}}</h4>
+   <h4>Ingredient4: {{recipie.strIngredient4}}</h4>
+   <h4>Measure1: {{recipie.strMeasure1}}</h4>
+   <h4>Measure2: {{recipie.strMeasure2}}</h4>
+   <h4>Measure3: {{recipie.strMeasure3}}</h4>
+   <h4>Measure4: {{recipie.strMeasure4}}</h4>
+   <h4>Measure5: {{recipie.strMeasure5}}</h4>
+  </li>
+  </ul>
+
+  <ion-icon name="logo-facebook"></ion-icon><ion-icon name="mail-outline"></ion-icon><ion-icon name="logo-twitter"></ion-icon>
 </ion-content>

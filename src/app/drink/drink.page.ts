@@ -7,14 +7,15 @@ import{Storage} from '@ionic/storage';
   styleUrls: ['./drink.page.scss'],
 })
 export class DrinkPage implements OnInit {
-  cocktail:string;
+  drinks:string;
   constructor(private storage:Storage) { }
-
+  
+  //Save button that saves a string to local storage
   ngOnInit() {
   }
   save1(){
-    console.log(this.cocktail);
-    this.storage.set("drinks", this.cocktail);
+    console.log(this.drinks);
+    this.storage.set("drinks", this.drinks);
   }
 
 }
